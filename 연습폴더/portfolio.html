@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="프론트엔드 개발자 Han Chan Woo의 포트폴리오입니다. 프로젝트, 기술 스택, 경력 등을 확인할 수 있습니다.">
+
+    <title>Han's portfolio</title>
+
+    <!-- 1) reset 먼저, 그 다음에 내 CSS -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="portfolio.css">
+
+    <!-- 2) Noto Sans 폰트 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- 3) 파비콘 -->
+    <link rel="icon" type="image/png" href="Vector.png" sizes="32x32">
+</head>
+<body>
+    <div class="container"> <!--전체를 감싸는 컨테이너-->
+        <header class="header"> <!--header 영역-->
+            <h1 class="main-header">Portfolio</h1>
+            <div class="header-name">
+               <h2 class="header-name-text">Han Chan Woo</h2>
+            </div>
+        </header>  <!--header-->
+
+        <main class="main">
+            <section class="main-container">
+                <h2 class="profile">Profile</h2>
+                <div class="profile-text">
+                    <p>사용자 경험을 중심으로 문제를 해결하는 프론트엔드 개발자를 목표로 하고 있습니다</p>
+                    <p>현재 오르미캠프를 통해 프론트엔드 기반의 실무형 프로젝트들을 경험하며</p>
+                    <p>웹 사이트 구현 능력과 구조적인 사고능력을 함께 성장시키고 있습니다.</p>
+                </div> <!--profile-text-->
+                <div class="developer">Front-end Developer</div>
+            </section> <!--main-container-->
+
+            <section class="profile-box">
+                <img class="profile-img" src="프로필.png" alt="프로필이미지">
+            </section>
+
+            <section class="contact">
+                <h2 class="contact-name">CONTACT</h2>
+                <div class="contact-list">
+                    <div class="item">
+                        <span class="label">Email</span>
+                        <span class="value">brad64405@gmail.com</span>
+                    </div> <!--item-->
+
+                    <div class="item">
+                        <span class="label">Phone</span>
+                        <span class="value">010-9691-3987</span>
+                    </div> <!--item-->
+
+                    <div class="item">
+                        <span class="label">Address</span>
+                        <span class="value">Gwangju, Korea</span>
+                    </div> <!--item-->
+                </div> <!--contact-list-->
+            </section>
+
+            <section class="work">
+                <h2 class="work-name">WORK EXPERIENCE</h2>
+                <h3>KTCS Customer Service | 2015 ~ 2025</h3>
+                <p>Job Position</p>
+                <p>KT 100 고객센터와 KT 스카이라이프 고객센터 근무</p>
+                <p>일반 상담 및 AS 전체 고객응대</p>
+                <p>고객만족실에서 센터내 VOC 및 대외 VOC 업무처리 담당</p>
+            </section> <!--work-->
+
+            <section class="sports">
+                <h2 class="sports-name">Sports Experience</h2>
+                <h3>Student bowler | 2005 ~ 2011</h3>
+                <p>중학교 1학년부터 학생부 볼링선수 시작</p>
+                <p>고등학교 볼링 특기생 입학 | 10여회 이상 수상경력</p>
+                <p>대학교 볼링 특기생으로 입학</p>
+            </section> <!--sports-->
+
+            <section class="skills">
+                <div class="skills-box">
+                    <h2 class="skills-name">SKILLS</h2>
+                    <div class="skills-list">
+                        <div class="skill-card">
+                            <div class="skill-card-html"><p>HTML</p></div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-card-css"><p>CSS</p></div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-card-javascript"><p>JavaScript</p></div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-card-bowling"><p>Bowling</p></div>
+                        </div>
+                    </div> <!--skills-list-->
+                </div> <!--skills-box-->
+            </section>
+
+            <section class="education">
+                <div class="education-box">
+                    <h2 class="education-name">EDUCATION</h2>
+                </div>
+                <p>Wolgye Middle School | 2005 ~ 2007</p>
+                <p>High-Tech High School | 2008 ~ 2011</p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-copy">© 이스트소프트 오르미 캠프 2025.11.18 ~</div>
+        </footer>
+    </div> <!--container-->
+</body>
+</html>
