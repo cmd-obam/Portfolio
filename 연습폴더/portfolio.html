@@ -7,14 +7,13 @@
 
     <title>Han's portfolio</title>
 
-    <!-- 1) reset 먼저, 그 다음에 내 CSS -->
+    
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="portfolio.css">
 
-    <!-- 2) Noto Sans 폰트 추가 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <!-- 3) 파비콘 -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
     <link rel="icon" type="image/png" href="Vector.png" sizes="32x32">
 </head>
 <body>
@@ -45,17 +44,17 @@
                 <h2 class="contact-name">CONTACT</h2>
                 <div class="contact-list">
                     <div class="item">
-                        <span class="label">Email</span>
+                        <span class="label">Email : </span>
                         <span class="value">brad64405@gmail.com</span>
                     </div> <!--item-->
 
                     <div class="item">
-                        <span class="label">Phone</span>
+                        <span class="label">Phone : </span>
                         <span class="value">010-9691-3987</span>
                     </div> <!--item-->
 
                     <div class="item">
-                        <span class="label">Address</span>
+                        <span class="label">Address : </span>
                         <span class="value">Gwangju, Korea</span>
                     </div> <!--item-->
                 </div> <!--contact-list-->
@@ -63,47 +62,86 @@
 
             <section class="work">
                 <h2 class="work-name">WORK EXPERIENCE</h2>
-                <h3>KTCS Customer Service | 2015 ~ 2025</h3>
-                <p>Job Position</p>
-                <p>KT 100 고객센터와 KT 스카이라이프 고객센터 근무</p>
-                <p>일반 상담 및 AS 전체 고객응대</p>
-                <p>고객만족실에서 센터내 VOC 및 대외 VOC 업무처리 담당</p>
+                <h3 class="ktcs">KTCS Customer Service | 2015 ~ 2025</h3>
+                <p class="job-position">Job Position</p>
+                <p class="job-text">KT 100 고객센터와 KT 스카이라이프 고객센터 근무</p>
+                <p class="job-text">일반 상담 및 AS 전체 고객응대</p>
+                <p class="job-text">고객만족실에서 센터내 VOC 및 대외 VOC 업무처리 담당</p>
             </section> <!--work-->
 
             <section class="sports">
-                <h2 class="sports-name">Sports Experience</h2>
-                <h3>Student bowler | 2005 ~ 2011</h3>
-                <p>중학교 1학년부터 학생부 볼링선수 시작</p>
-                <p>고등학교 볼링 특기생 입학 | 10여회 이상 수상경력</p>
-                <p>대학교 볼링 특기생으로 입학</p>
+                <div class="box">
+                    <h2 class="sports-name">Sports Experience</h2>
+                    <div class="sports-box">
+                        <h3 class="sports-bowling">Student bowler | 2005 ~ 2011</h3>
+                        <p class="sports-text">중학교 1학년부터 학생부 볼링선수 시작</p>
+                        <p class="sports-text">고등학교 볼링 특기생 입학 | 10여회 이상 수상경력</p>
+                        <p class="sports-text">대학교 볼링 특기생으로 입학</p>
+                    </div>
+                </div>
+                <div class="sports-img-box">
+                   <img class="sports-img" src="bowling.png" alt="볼링">
+                </div>
             </section> <!--sports-->
-
             <section class="skills">
                 <div class="skills-box">
                     <h2 class="skills-name">SKILLS</h2>
                     <div class="skills-list">
+                        
                         <div class="skill-card">
-                            <div class="skill-card-html"><p>HTML</p></div>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <p>CLICK</p>
+                                </div>
+                                <div class="card-back">
+                                    <div class="skill-card-html"><p>HTML</p></div>
+                                </div>
+                            </div>
                         </div>
+                        
                         <div class="skill-card">
-                            <div class="skill-card-css"><p>CSS</p></div>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <p>CLICK</p>
+                                </div>
+                                <div class="card-back">
+                                    <div class="skill-card-css"><p>CSS</p></div>
+                                </div>
+                            </div>
                         </div>
+                        
                         <div class="skill-card">
-                            <div class="skill-card-javascript"><p>JavaScript</p></div>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <p>CLICK</p>
+                                </div>
+                                <div class="card-back">
+                                    <div class="skill-card-javascript"><p>JavaScript</p></div>
+                                </div>
+                            </div>
                         </div>
+                        
                         <div class="skill-card">
-                            <div class="skill-card-bowling"><p>Bowling</p></div>
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <p>CLICK</p>
+                                </div>
+                                <div class="card-back">
+                                    <div class="skill-card-bowling"><p>Bowling</p></div>
+                                </div>
+                            </div>
                         </div>
-                    </div> <!--skills-list-->
-                </div> <!--skills-box-->
-            </section>
+                        
+                    </div> 
+                </div>
+            </section> 
 
             <section class="education">
                 <div class="education-box">
                     <h2 class="education-name">EDUCATION</h2>
                 </div>
-                <p>Wolgye Middle School | 2005 ~ 2007</p>
-                <p>High-Tech High School | 2008 ~ 2011</p>
+                <p class="edu-text">Wolgye Middle School | 2005 ~ 2007</p>
+                <p class="edu-text" >High-Tech High School | 2008 ~ 2011</p>
             </section>
         </main>
 
