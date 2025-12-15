@@ -4,150 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="프론트엔드 개발자 Han Chan Woo의 포트폴리오입니다. 프로젝트, 기술 스택, 경력 등을 확인할 수 있습니다.">
-
     <title>Han's portfolio</title>
-
-    
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="portfolio.css">
-
-    
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    
     <link rel="icon" type="image/png" href="Vector.png" sizes="32x32">
+
 </head>
 <body>
-    <div class="container"> <!--전체를 감싸는 컨테이너-->
-        <header class="header"> <!--header 영역-->
-            <h1 class="main-header">Portfolio</h1>
-            <div class="header-name">
-               <h2 class="header-name-text">Han Chan Woo</h2>
-            </div>
-        </header>  <!--header-->
+      
+    <div class="container">
+        <div class="portfolio">
+                <header class="header">
+                    <h1 class="portfolio">Portfolio</h1>
+                    <h2 class="han-name">Han Chan Woo</h2>
+                </header>
+            </div> <!--portfolio-->
 
-        <main class="main">
-            <section class="main-container">
-                <h2 class="profile">Profile</h2>
-                <div class="profile-text">
-                    <p>사용자 경험을 중심으로 문제를 해결하는 프론트엔드 개발자를 목표로 하고 있습니다</p>
-                    <p>현재 오르미캠프를 통해 프론트엔드 기반의 실무형 프로젝트들을 경험하며</p>
-                    <p>웹 사이트 구현 능력과 구조적인 사고능력을 함께 성장시키고 있습니다.</p>
-                </div> <!--profile-text-->
-                <div class="developer">Front-end Developer</div>
-            </section> <!--main-container-->
-
-            <section class="profile-box">
-                <img class="profile-img" src="프로필.png" alt="프로필이미지">
-            </section>
-
-            <section class="contact">
-                <h2 class="contact-name">CONTACT</h2>
-                <div class="contact-list">
-                    <div class="item">
-                        <span class="label">Email : </span>
-                        <span class="value">brad64405@gmail.com</span>
-                    </div> <!--item-->
-
-                    <div class="item">
-                        <span class="label">Phone : </span>
-                        <span class="value">010-9691-3987</span>
-                    </div> <!--item-->
-
-                    <div class="item">
-                        <span class="label">Address : </span>
-                        <span class="value">Gwangju, Korea</span>
-                    </div> <!--item-->
-                </div> <!--contact-list-->
-            </section>
-
-            <section class="work">
-                <h2 class="work-name">WORK EXPERIENCE</h2>
-                <h3 class="ktcs">KTCS Customer Service | 2015 ~ 2025</h3>
-                <p class="job-position">Job Position</p>
-                <p class="job-text">KT 100 고객센터와 KT 스카이라이프 고객센터 근무</p>
-                <p class="job-text">일반 상담 및 AS 전체 고객응대</p>
-                <p class="job-text">고객만족실에서 센터내 VOC 및 대외 VOC 업무처리 담당</p>
-            </section> <!--work-->
-
-            <section class="sports">
-                <div class="box">
-                    <h2 class="sports-name">Sports Experience</h2>
-                    <div class="sports-box">
-                        <h3 class="sports-bowling">Student bowler | 2005 ~ 2011</h3>
-                        <p class="sports-text">중학교 1학년부터 학생부 볼링선수 시작</p>
-                        <p class="sports-text">고등학교 볼링 특기생 입학 | 10여회 이상 수상경력</p>
-                        <p class="sports-text">대학교 볼링 특기생으로 입학</p>
+        <main class="main-container">
+            <div class="profile-container">
+                <div class="profile">Profile</div>
+                <div class="profile-text-box">
+                    <p class="profile-text">목표를 향해 나아가는 집중력과 끈기를 가진 예비 개발자입니다.</p>
+                    <p class="profile-text">7년간 볼링선수로 활동하며 단련된 집중력은 코드를 분석하거나 디버깅하는 과정에서 조금더 정확하게 파악할수 있습니다.</p>
+                    <p class="profile-text">그리고 기존 고객센터에서 약 10여년간의 근무를 바탕으로 성실함과 고객만족실에서 VOC업무처리로 인한 타 부서 및 팀원간의 커뮤니케이션으로 원활한 협업을 할수 있십니다.</p>
+                    <p class="profile-text">이스트소프트 오르미부트캠프에서 쌓은 개발 역량을 바탕으로 맡은 업무를 완벽하게 구현할때까지 포기하지 않겠습니다.</p>
+                </div>
+                <div class="front-end">
+                    <p class="front">Front-end Developer</p>
+                </div>
+            </div> <!--profile-container-->
+            <div class="img-container">
+                <img class="profile-img" src="프로필.png" alt="프로필 사진">
+            </div> <!--img-container-->
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h2 class="contact">CONTACT</h2>
+                    <div class="email">
+                        <p>Email</p>
+                        <p>brad64405@gmail.com</p>
+                    </div>
+                    <div class="phone">
+                        <p>Phone</p>
+                        <p>010-9691-3987</p>
+                    </div>
+                    <div class="github">
+                        <p>Github</p>
+                        <p>https://github.com/cmd-obam</p>
                     </div>
                 </div>
-                <div class="sports-img-box">
-                   <img class="sports-img" src="bowling.png" alt="볼링">
+            </div> <!--contact-container-->
+            <div class="work-sports-container">
+                <div class="work">
+                    <h2 class="experience">WORK EXPERIENCE</h2>
+                    <div class="work-box">
+                        <h3 class="ktcs">KTCS Customer Servics | 2015 ~ 2025</h3>
+                        <p class="position">Job position</p>
+                    </div>
+                    <div class="kt">
+                        <h3 class="customer">KT 고객센터 근무</h3>
+                        <p>일반 상담 및 AS, 영업등 다양한 분야에서 업무를 진행 하였으며 특히 고객만족실에서 3년간 대내외 VOC 처리</p>
+                        <p> - 다양한 부서와의 소통으로인한 문제능력 해결 및 커뮤니케이션 강화</p>
+                    </div>
+                    <div class="sky">
+                        <h3 class="customer">KT 스카이라이프 근무</h3>
+                        <p>일반 상담 및 AS, 모바일등 다양한 분야에서 업무 진행</p>
+                        <p> - 다양한 고객들과의 소통 및 문제해결등으로 문제해결 능력과 커뮤니케이션 강화</p>
+                    </div>
                 </div>
-            </section> <!--sports-->
-            <section class="skills">
-                <div class="skills-box">
-                    <h2 class="skills-name">SKILLS</h2>
-                    <div class="skills-list">
-                        
-                        <div class="skill-card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <p>CLICK</p>
-                                </div>
-                                <div class="card-back">
-                                    <div class="skill-card-html"><p>HTML</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <p>CLICK</p>
-                                </div>
-                                <div class="card-back">
-                                    <div class="skill-card-css"><p>CSS</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <p>CLICK</p>
-                                </div>
-                                <div class="card-back">
-                                    <div class="skill-card-javascript"><p>JavaScript</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-card">
-                            <div class="card-inner">
-                                <div class="card-front">
-                                    <p>CLICK</p>
-                                </div>
-                                <div class="card-back">
-                                    <div class="skill-card-bowling"><p>Bowling</p></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div> 
+                <div class="sports">
+                    <div class="sports-box">
+                        <h2 class="sports-experience">Sports Experience</h2>
+                        <h3 class="bowler">student bowler | 2005 ~ 2011</h3>
+                        <p>- 중학교 1학년부터 학생부 볼링선수 시작</p>
+                        <p>- 고등학교 볼링 특기생 입학 | 전국대회 10여회 이상 수상</p>
+                        <p>- 대학교 볼링 특기생 입학</p>
+                    </div>
                 </div>
-            </section> 
-
-            <section class="education">
-                <div class="education-box">
-                    <h2 class="education-name">EDUCATION</h2>
-                </div>
-                <p class="edu-text">Wolgye Middle School | 2005 ~ 2007</p>
-                <p class="edu-text" >High-Tech High School | 2008 ~ 2011</p>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-copy">© 이스트소프트 오르미 캠프 2025.11.18 ~</div>
-        </footer>
+            </div> <!--work-sports-container-->
+            <div class="edu-skill-box">
+                <div class="education">
+                    <h2 class="edu-text">EDUCATION</h2>
+                    <p class="edu-text-box">Wolgye Middle School | 2005 ~ 2007</p>
+                    <p class="edu-text-box">High-tech high School | 2008 ~ 2011</p>
+                </div> <!--education-->
+                <div class="skill-edu-container">
+                    <div class="skill">
+                        <h2 class="skill-text">SKILL</h2>
+                        <div class="skill-box">
+                            <div class="skill-inner">
+                                <div class="card-face card-front">
+                                    <span class="click-text">CLICK</span>
+                                </div>
+                                <div class="card-face card-back html">HTML</div>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-inner">
+                            <div class="card-face card-front">
+                                <span class="click-text">CLICK</span>
+                            </div>
+                            <div class="card-face card-back css">CSS</div>
+                        </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-inner">
+                            <div class="card-face card-front">
+                                <span class="click-text">CLICK</span>
+                            </div>
+                            <div class="card-face card-back javascript">JavaScript</div>
+                        </div>
+                        </div>
+                        <div class="skill-box">
+                            <div class="skill-inner">
+                             <div class="card-face card-front">
+                                <span class="click-text">CLICK</span>
+                            </div>
+                            <div class="card-face card-back bowling">Bowling</div>
+                        </div>
+                        </div>
+                    </div>
+                </div> <!--skill-edu-container-->
+            </div>
+        </main> <!--main-container-->
     </div> <!--container-->
 </body>
 </html>
