@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+                height: 100vh;
+                display: flex;
+                flex-direction: wrap;
+                justify-content: center;
+                align-items: center;
+                font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+            }
+
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            ul
+            {
+                list-style: none;
+            }
+
+            button {
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+            }
+            .layout{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+            .conteiner {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                
+            }
+            .card-item {
+                width: 328px;
+                height: 120px;
+                border-radius: 10px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                
+            }
+            .card-item:hover{
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.35);
+            }
+
+            .card {
+                width: 120px;
+                height: 120px;
+                background-color: #7ac5d2;
+               
+            }
+
+            .card-img {
+                height: 100%;
+                width: 120px;
+                min-width: 120px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+          .card-img svg {
+            position: absolute;
+            
+            width: 38px;
+            height: 38px;
+            opacity: 0;
+                            display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        .card-img:hover svg {
+            animation: show 2s infinite;
+            
+            }
+
+            .card-img svg:nth-child(5) { animation-delay: 0s; }
+            .card-img svg:nth-child(1) { animation-delay: 0.2s; }
+            .card-img svg:nth-child(2) { animation-delay: 0.6s; }
+            .card-img svg:nth-child(3) { animation-delay: 1.0s; }
+            .card-img svg:nth-child(4) { animation-delay: 1.6s; }
+           
+
+            @keyframes show {
+            0% { opacity: 0; }
+            15% { opacity: 0; }  
+            35% { opacity: 0; }  
+            50% { opacity: 0; }  
+            100% { opacity: 1; }
+            }
+
+
+            .img {
+                width: 38px;
+                height: 38px;
+
+                 display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+            .img:hover {
+                transform: scale(1.5);
+            }
+            .text {
+                padding: 8px 12px;
+                display: flex;
+                align-items: flex-start; 
+            }
+
+            .label {
+                font-size: 11px;
+                font-weight: 300;
+                color: #000000;
+
+            }
+
+            .head {
+                font-size: 16px;
+                font-weight: 600;
+                
+                color: #000000;
+
+            }
+            .desc {
+                font-size: 12px;
+                font-weight: 400;
+                color: #414141;
+                
+            }
+            .label,
+            .desc {
+                display: block;
+            }
+
+
+            .action {
+                margin-top: 8px;
+                border-radius: 4px;
+                height: 27px;
+            }
+
+            .action-btn {
+                width: 100%;
+                height: 27px;
+                border-radius: 4px;
+                padding: 7px 10px;
+                font-size: 11px;
+                font-weight: 300;
+                color: #ffffff;
+                background: linear-gradient(270deg, #2984b9 0.02%, #133b53 99.98%);
+                transition: all 0.3s ease;
+            }
+            .card-item:hover .action-btn{
+                font-weight: 600;
+            }
+
+
+            .card2:hover .img{
+                transform: scale(1.5);
+            }
+
+            .card2 {
+                width: 340px;
+                height: 285px;
+                border: 2px solid #d9d9d9;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.3s ease;
+            }
+            .card2:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 4px 0 0 rgba(0,0,0,0.25);
+            }
+            .card2-container{
+                display: flex;
+                padding-top: 15px;
+                gap: 15px;
+            }
+            .header {
+                height: 74px;
+                width: 340px;
+                display: flex;
+            }
+
+            .profile {
+                width: 81px;
+                height: 74px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .head-circle {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-color: #c198f3;
+                border-radius: 50%;
+                
+
+            }
+
+            .card2-img {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .header-top {
+                display: flex;                
+                justify-content: space-between;
+                align-items: center;
+                padding-right: 20px 0;
+                flex: 1;
+                
+                
+            }
+
+            .head2 {
+
+                font-size: 16px;
+                font-weight: 600;
+                color: #000000;
+            }
+            .sub-head {
+                font-size: 12px;
+                font-weight: 400;
+                color: #939393;
+            }
+            .dot {
+                padding-right: 11px;
+                display: flex;
+                
+            }
+
+            .main {
+                width: 340px;
+                height: 153px;
+                background-color: #c198f3;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .logo-2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+       
+                
+            }
+
+            .card2-logo {
+
+                width: 60px;
+                height: 60px;
+                transition: all 0.3s ease;
+            }
+            .card-logo:hover {
+                transform: scale(1.2);
+            }
+            .card2-logo {
+                width: 60px;
+                height: 60px;
+                transition: transform 0.3s ease;
+            }
+            .card2:hover .card2-logo {
+                transform: scale(1.2);
+            }
+
+            .icon-box {
+                height: 58px;
+                padding: 13px 33px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .icon-box button {
+                width: 18px;
+                height: 18px;
+                border: none;
+                background: none;
+                cursor: pointer;
+            }
+
+
+
+            .heart:hover svg
+                    
+            {
+                color: red;
+            }
+
+            .chat:hover svg{
+                color: blue;
+            }
+            .share:hover svg{
+                color: rgb(121, 255, 121);
+            }
+            .bookmark:hover svg {
+                color: black;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+    <ul class="conteiner">       
+            <li class="card-item">
+                 <div class="card">
+                <div class="card-img">
+                        <svg class="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery" viewBox="0 0 16 16">
+                        <path d="M0 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm14 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img2"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-low" viewBox="0 0 16 16">
+                        <path d="M2 6h2v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16">
+                        <path d="M2 6h5v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img4"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16">
+                        <path d="M2 6h10v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img5"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+                        <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"/>
+                        <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2"/>
+                        <path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                        <path d="M12 10h-1.783l1.542-1.639q.146-.156.241-.34zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646M16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                <div class="text">
+                    <div>
+                        <span class="label">Lable</span>
+                        <h2 class="head">Heading</h2>
+                        <span class="desc">This is a short description about the card</span>
+                        <div class="action">
+                            <button class="action-btn">Action</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card">
+                <div class="card-img">
+                        <svg class="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery" viewBox="0 0 16 16">
+                        <path d="M0 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm14 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img2"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-low" viewBox="0 0 16 16">
+                        <path d="M2 6h2v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16">
+                        <path d="M2 6h5v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img4"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16">
+                        <path d="M2 6h10v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img5"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+                        <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"/>
+                        <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2"/>
+                        <path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                        <path d="M12 10h-1.783l1.542-1.639q.146-.156.241-.34zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646M16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="text">
+                    <div>
+                        <span class="label">Lable</span>
+                        <h2 class="head">Heading</h2>
+                        <span class="desc">This is a short description about the card</span>
+                        <div class="action">
+                            <button class="action-btn">Action</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="card-item">
+                <div class="card">
+                <div class="card-img">
+                        <svg class="img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery" viewBox="0 0 16 16">
+                        <path d="M0 6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm14 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img2"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-low" viewBox="0 0 16 16">
+                        <path d="M2 6h2v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img3"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16">
+                        <path d="M2 6h5v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img4"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-full" viewBox="0 0 16 16">
+                        <path d="M2 6h10v4H2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+                        <svg class="img5"  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-charging" viewBox="0 0 16 16">
+                        <path d="M9.585 2.568a.5.5 0 0 1 .226.58L8.677 6.832h1.99a.5.5 0 0 1 .364.843l-5.334 5.667a.5.5 0 0 1-.842-.49L5.99 9.167H4a.5.5 0 0 1-.364-.843l5.333-5.667a.5.5 0 0 1 .616-.09z"/>
+                        <path d="M2 4h4.332l-.94 1H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h2.38l-.308 1H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2"/>
+                        <path d="M2 6h2.45L2.908 7.639A1.5 1.5 0 0 0 3.313 10H2zm8.595-2-.308 1H12a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H9.276l-.942 1H12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                        <path d="M12 10h-1.783l1.542-1.639q.146-.156.241-.34zm0-3.354V6h-.646a1.5 1.5 0 0 1 .646.646M16 8a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8"/>
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="text">
+                    <div>
+                        <span class="label">Lable</span>
+                        <h2 class="head">Heading</h2>
+                        <span class="desc">This is a short description about the card</span>
+                        <div class="action">
+                            <button class="action-btn">Action</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            </ul>
+            <ul class="card2-container">
+            <li class="card2">
+                <div class="card-list">
+                    <div class="header">
+                        <div class="profile"><!--좌 상단 프로필 동그라미-->
+                            <div class="head-circle"></div>
+                            <svg class="card2-img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                            <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/>
+                            </svg>
+                        </div> 
+                        <div class="header-top"> <!--글자와 메뉴버튼-->
+                            <div class="header-main"> <!--글자 박스-->
+                                <h2 class="head2">Heading</h2>
+                                <span class="sub-head">Subheading</span>
+                            </div>
+                            <div class="dot">
+                                <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                            </svg>
+                                </a>
+                            </div>
+                        </div> <!--header-top-->
+        
+                    </div> <!--header-->
+        
+                            <div class="main"> <!--가운데 박스와 로고 띄우기-->
+                                <div class="logo-2">
+                                    <svg class="card2-logo"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                    <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+        
+                        <div class="icon-box"> <!--하단 아이콘 4개-->
+                            <button class="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                </svg>
+                            </button>
+                            <button class="chat">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                </button>
+                            <button class="share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                                    <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+                                    </svg>
+                            </button>
+                            <button class="bookmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                </div> <!--card-list-->
+            </li>
+            <li class="card2">
+                <div class="card-list">
+                    <div class="header">
+                        <div class="profile"><!--좌 상단 프로필 동그라미-->
+                            <div class="head-circle"></div>
+                            <svg class="card2-img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                            <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/>
+                            </svg>
+                        </div> 
+                        <div class="header-top"> <!--글자와 메뉴버튼-->
+                            <div class="header-main"> <!--글자 박스-->
+                                <h2 class="head2">Heading</h2>
+                                <span class="sub-head">Subheading</span>
+                            </div>
+                            <div class="dot">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div> <!--header-top-->
+        
+                    </div> <!--header-->
+        
+                            <div class="main"> <!--가운데 박스와 로고 띄우기-->
+                                <div class="logo-2">
+                                    <svg class="card2-logo"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                    <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+        
+                        <div class="icon-box"> <!--하단 아이콘 4개-->
+                            <button class="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                </svg>
+                            </button>
+                            <button class="chat">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                </button>
+                            <button class="share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                                    <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+                                    </svg>
+                            </button>
+                            <button class="bookmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                </div> <!--card-list-->
+            </li>
+            <li class="card2">
+                <div class="card-list">
+                    <div class="header">
+                        <div class="profile"><!--좌 상단 프로필 동그라미-->
+                            <div class="head-circle"></div>
+                            <svg class="card2-img" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                            <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/>
+                            </svg>
+                        </div> 
+                        <div class="header-top"> <!--글자와 메뉴버튼-->
+                            <div class="header-main"> <!--글자 박스-->
+                                <h2 class="head2">Heading</h2>
+                                <span class="sub-head">Subheading</span>
+                            </div>
+                            <div class="dot">
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div> <!--header-top-->
+        
+                    </div> <!--header-->
+        
+                            <div class="main"> <!--가운데 박스와 로고 띄우기-->
+                                <div class="logo-2">
+                                    <svg class="card2-logo"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
+                                    <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+        
+                        <div class="icon-box"> <!--하단 아이콘 4개-->
+                            <button class="heart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                                </svg>
+                            </button>
+                            <button class="chat">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                <path d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                </button>
+                            <button class="share">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                                    <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"/>
+                                    </svg>
+                            </button>
+                            <button class="bookmark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                                <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                </div> <!--card-list-->
+            </li>
+            
+        </ul>
+    </div>
+    
+</body>
+</html>
+

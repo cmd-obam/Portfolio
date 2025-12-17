@@ -111,7 +111,7 @@ body {
 .profile-img {
     width: 100%;
     height: auto;
-    
+    margin-left: 20px;
 }
 
 .contact-container {

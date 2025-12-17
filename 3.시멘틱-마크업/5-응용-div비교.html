@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div vs 시맨틱 태그 비교</title>
+  </head>
+  <body>
+    <h1>같은 페이지, 다른 방식</h1>
+    <p>아래 두 가지 방식으로 같은 구조를 만들어봅니다.</p>
+
+    <hr />
+
+    <h2>비시맨틱 방식 (div만 사용)</h2>
+
+    <!-- 문제점: 태그 이름만으로는 역할을 알 수 없음 -->
+    <div class="header">
+      <div class="title">블로그 제목</div>
+      <div class="nav">
+        <div class="nav-item">홈</div>
+        <div class="nav-item">글목록</div>
+        <div class="nav-item">소개</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="post">
+        <div class="post-title">글 제목</div>
+        <div class="post-content">
+          <p>글 내용입니다.</p>
+        </div>
+        <div class="post-footer">작성일: 2025-11-19</div>
+      </div>
+
+      <div class="sidebar">
+        <div class="sidebar-title">관련 글</div>
+        <div class="sidebar-item">링크 1</div>
+        <div class="sidebar-item">링크 2</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="copyright">&copy; 2025 My Blog</div>
+    </div>
+
+    <div class="explanation">
+      <h3>문제점:</h3>
+      <ul>
+        <li>검색 엔진: "div가 뭘 의미하는지 모르겠어요" 🤷</li>
+        <li>스크린 리더: "div, div, div..." (의미 없는 반복)</li>
+        <li>개발자: class 이름을 봐야 역할 파악 가능</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <h2>시맨틱 방식 (의미있는 태그 사용)</h2>
+
+    <!-- 장점: 태그 이름만으로 역할을 바로 알 수 있음 -->
+    <header>
+      <h2>블로그 제목</h2>
+      <nav>
+        <ul>
+          <li>홈</li>
+          <li>글목록</li>
+          <li>소개</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <h3>글 제목</h3>
+        <p>글 내용입니다.</p>
+        <footer>작성일: 2025-11-19</footer>
+      </article>
+
+      <aside>
+        <h3>관련 글</h3>
+        <ul>
+          <li>링크 1</li>
+          <li>링크 2</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 My Blog</p>
+    </footer>
+
+    <section>
+      <h3>장점:</h3>
+      <ul>
+        <li>검색 엔진: "아, header는 헤더구나, article은 독립적인 글이구나!"</li>
+        <li>스크린 리더: "탐색 영역, 주 콘텐츠, 보조 콘텐츠" (명확한 안내)</li>
+        <li>개발자: 태그만 봐도 구조 파악 즉시 가능!</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>비교 정리</h2>
+      <table>
+        <tr>
+          <th>항목</th>
+          <th>비시맨틱 (div)</th>
+          <th>시맨틱</th>
+        </tr>
+        <tr>
+          <td>검색엔진</td>
+          <td>구조 파악 어려움</td>
+          <td>구조 명확히 이해</td>
+        </tr>
+        <tr>
+          <td>접근성</td>
+          <td>스크린 리더 사용 어려움</td>
+          <td>스크린 리더 친화적</td>
+        </tr>
+        <tr>
+          <td>유지보수</td>
+          <td>class 이름 의존</td>
+          <td>태그 이름으로 즉시 파악</td>
+        </tr>
+        <tr>
+          <td>코드 가독성</td>
+          <td>낮음</td>
+          <td>높음</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>

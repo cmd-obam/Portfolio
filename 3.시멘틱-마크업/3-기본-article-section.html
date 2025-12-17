@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>article과 section</title>
+</head>
+<body>
+    
+    <h1>article과 section 태그 배우기</h1>
+
+    <!--article: 이것만 떼어내도 독립적인 의미가 있는 콘텐츠-->
+    <h2>article: 독립적인 컨텐츠</h2>
+    <article>
+        <h3>HTML 시멘틱 태그란?</h3>
+        <p>시멘틱 태그는 의미를 전달하는 태그입니다.</p>
+        <p>이 글은 RSS 피드나 SNS에 공유할 수 있는 독립적인 콘텐츠입니다</p>
+        <footer>
+            <p>작성자: 홍길동 | 작성일: 2025-11-24</p>
+        </footer>
+    </article>
+
+
+    <hr>
+
+    <h2>section: 주제별 그룹</h2>
+    <!--section: 제목으로 그룹화 할 수 있는 주제별 콘텐츠-->
+    <article>
+        <h3>웹 개발 가이드</h3>
+
+        <section>
+            <h4>1. HTML 기초</h4>
+            <p>HTML은 웹의 구조를 만듭니다</p>
+        </section>
+
+        <section>
+            <h4>2. CSS 기초</h4>
+            <p>CSS는 웹의 스타일을 담당합니다.</p>
+        </section>
+
+        <section>
+            <h4>3.JavaScript 기초</h4>
+            <p>JavaScript는 웹의 동작을 만듭니다.</p>
+        </section>
+
+
+    </article>
+
+    <hr>
+    <h2>section 안에 article(뉴스 섹션)</h2>
+
+    <section>
+        <article>
+            <h3>오늘의 뉴스</h3>
+
+            <article>
+                <h4>뉴스 1: 날씨 소식</h4>
+                <p>오늘은 맑은 날씨 입니다.</p>
+            </article>
+
+            <article>
+                <h4>뉴스 2: 경제 소식</h4>
+                <p>주식 시장이 상장했습니다.</p>
+            </article>
+        </article>
+    </section>
+
+    <hr>
+
+    <h2>article 안에 article(댓글)</h2>
+    <article>
+        <h3>블로그 글 제목</h3>
+        <p>블로그 본문 내용입니다.</p>
+
+        <section>
+            <h4>댓글</h4>
+
+            <article>
+                <p>홍길동 : 좋은 글 감사합니다.</p>
+            </article>
+
+            <article>
+                <p>김철수 : 많이 배웟어요.</p>
+            </article>
+        </section>
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

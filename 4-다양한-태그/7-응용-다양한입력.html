@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 - 다양한 입력</title>
+    <style>
+        form {
+            margin-bottom: 30px;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+        }
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="checked"],input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select, textarea {
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        optgroup{
+            font-weight: bold;
+            color: red;
+        }
+        option {
+            color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>폼 태그 배우기 - 다양한 입력</h1>
+    <h2>체크박스 - 다중 선택</h2>
+    
+    <form>
+        <fieldset>
+            <legend>관심 분야 선택 ( 복수 가능)</legend>
+
+            <label>
+                <input type="checkbox" name="interest" value="html">
+                HTML
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="css">
+                CSS
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="JavaScript">
+                JavaScript
+            </label>
+
+            <label>
+                <input type="checkbox" name="interest" value="React">
+                React
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>약관 동의</legend>
+            <label>
+                <input type="checkbox" name="agree" value="terms" required>
+                이용약관에 동의 합니다( 필수 )
+            </label>
+            <label>
+                <input type="checkbox" name="agree" value="privacy" required>
+                개인정보 처리방침에 동의합니다 (필수)
+            </label>
+            <label>
+                <input type="checkbox" name="marketing" value="yes" checked>
+                마케팅 정보 수신에 동의합니다 (선택)
+            </label>
+        </fieldset>
+
+        <button type="submit">제출</button>
+
+    </form>
+
+        <h2>라디오 버튼 (radio) - 단일 선택</h2>
+        <form>
+        <fieldset>
+            <legend>성별 ( 하나만 선택)</legend>
+            <!--name이 같아야 같은 그룹으로 인식-->
+            <label>
+                <input type="radio" name="gender" value="male" checked>
+                남성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female">
+                여성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other">
+                기타
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>만족도 평가</legend>
+            <label>
+                <input type="radio" name="satisfaction" value="5">
+                매우 만족
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="4">
+                만족
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="3">
+                보통
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="2">
+                불만족
+            </label>
+            <label>
+                <input type="radio" name="satisfaction" value="1">
+                매우 불만족
+            </label>
+        </fieldset>
+
+        <button type="submit">제출</button>
+     </form>
+
+
+
+    <h2>드롭다운 선택 (select)</h2>
+    <form>
+        <label for="city">도시 선택</label>
+        <select id="city" name="city">
+            <option value="">선택하세요</option>
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value="incheon">인천</option>
+            <option value="deagu">대구</option>
+            <!--selected: 기본선택-->
+            <option value="gwanju" selected>광주</option>
+        </select>
+
+        <br><br>
+
+        <label for="skill">스킬</label>
+        <select id="skill" name="skill">
+            <option value="">선택하세요</option>
+            <optgroup label="프론트엔드">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </optgroup>
+            <optgroup label="백엔드">
+                <option value="mode.js">Mode.js</option>
+                <option value="python">Python</option>
+                <option value="Java">Java</option>
+            </optgroup>
+                    </select>
+            <br><br>
+
+        <!--multiple: 다중 선택-->
+        <label for="Languages">프로그래밍 언어(복수선택 가능)</label>
+        <select id="Languages" name="Languages" multiple size="5">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="Java">Java</option>
+        </select>
+        <p><small>Ctrl(cmd) + 클릭으로 여래거 선택 가능</small></p>
+
+        <button type="submit">제출</button>
+
+    </form>
+
+    <h2>
+        여러 줄 텍스트 (textarea)
+    </h2>
+    <form>
+        <!--rows: 보이는 줄수 cols: 보이는 글자 수-->
+        <label for="message">메세지</label>
+        <textarea id="message" name="message" rows="5" placeholder="메세지를 입력하세요"></textarea>
+
+
+        <label for="coment">댓글</label>
+        <textarea id="coment" name="coment" rows="3" maxlength="200" placeholder="최대 200자까지 입력가능"></textarea>
+
+        <label for="content">내용(기본값 있음)</label>
+        <textarea id="content" name="content" rows="4">여기에 기본 내용이 들어갑니다. 여러 줄도 가능합니다.</textarea>
+   
+        <button type="submit">제출</button>
+    </form>
+
+    <h2>파일 업로드 (file)</h2>
+    <form>
+        <!--accept: 혀용할 파일 형식 (image/* .pdf, .doc등)-->
+        <label type="photo">사진 업로드</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+
+
+        <br>
+
+
+        <label type="docments">문서 업로드 (복수)</label>
+        <input type="file" id="docments" name="docments" accept=".pdf,.doc,.docx" multiple>
+
+         <button type="submit">제출</button>
+    </form>
+    
+    <h2>fieldset과 legend</h2>
+    <form>
+        <fieldset>
+            <legend>개인 정보</legend>
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name">
+
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+
+        <fieldset>
+            <legend>주소 정보</legend>
+            <label for="address">주소</label>
+            <input type="text" id="address" name="address">
+
+            <label for="zipcode">우편번호</label>
+            <input type="text" id="zipcode" name="zipcode">
+        </fieldset>
+        <fieldset disabled>
+            <legend>비활성화된 그룹</legend>
+            <label for="disabled1">입력 불가</label>
+            <input type="text" id="disabled1" name="disabled1">
+
+            <label for="disabled2">이것도 입력 불가</label>
+            <input type="text" id="disabled2" name="disabled2">
+        </fieldset>
+
+        <button type="submit">제출</button>
+    </form>
+
+</body>
+</html>

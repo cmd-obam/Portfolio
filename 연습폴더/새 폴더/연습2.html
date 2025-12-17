@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {color:red;}
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <h1>폼 태그를 활용</h1>
+
+        <label for='username'>이름</label>
+        <input type="text" id="username" name="username" required>
+
+        <br>
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" required>
+
+        <br>
+
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required>
+
+        <br>
+        <button type="button">확인</button>
+        <button type="reset">초기화</button>
+
+        <br>
+        <label for="city">도시 선택 :</label>
+        <select id="city" name="city">
+            <option value="">도시 선택</option>
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value="deagu">대구</option>
+            <option value="incheon">인천</option>
+            <option value="gwangju">광주</option>
+            <option value="deajeon">대전</option>
+            <option value="ulsan">울산</option>
+            <option value="suwon">수원</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="message">메세지:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="내용을 입력하세요."></textarea>
+
+
+
+    </div>
+</body>
+</html>

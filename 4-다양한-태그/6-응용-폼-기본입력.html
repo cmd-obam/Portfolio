@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 - 기본 입력</title>
+    <style>
+        form {
+            margin-bottom: 30px;
+            padding: 20px;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        label {
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+            
+        }
+
+        input, button {
+            margin-bottom: 15px;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1> 폼 태그 배우기 - 기본입력</h1>
+
+    <h2>기본 폼 구조</h2>
+
+    <form>
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username">
+
+        <button type="submit">제출</button>
+    </form>
+
+    <h2>다양한 input type - 텍스트 관련</h2>
+    <form>
+        <!--type : text 일반 텍스트, 기본값-->
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+
+        <!--type : password 비밀번호-->
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요">
+
+        <!--type : email 이메일-->
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com">
+
+        <!--type : tel 전화번호-->
+        <label for="phone">전화번호</label>
+        <input type="tel" id="phone" name="phone" placeholder="010-0000-0000">
+
+        <!--type : url url형식검증-->
+        <label for="website">웹사이트</label>
+        <input type="ulr" id="website" name="website" placeholder="https://example.com">
+
+
+        <button type="submit">제출</button>
+    </form>
+
+    <h2>input 속성들</h2>
+    <form>
+        <!--placeholder: 입력 힌트-->
+        <label for="hint">placeholder 예시:</label>
+        <input type="text" id="hint" name="hint" placeholder="여기에 입력하세요">
+
+        <!--required: 필수 입력-->
+        <label for="required">필수 입력(required) </label>
+        <input type="text" id="required" name="required" placeholder=>
+
+
+        <!--readonly: 읽기 전용-->
+        <label for="readonly">읽기 전용(readonly) </label>
+        <input type="text" id="readonly" name="readonly" value="수정불가" readonly>
+
+        <!--disable: 비활성화-->
+        <label for="disable">비활성 (disable)</label>
+        <input type="text" id="disable" name="disable" value="비활성" disable>
+
+        <!--maxlength: 최대글자 수-->
+        <label for="maxlength">최대 10글자 (maxlength) </label>
+        <input type="text" id="maxlength" name="maxlength" maxlength="10">
+
+        <!--value: 기본값-->
+        <label for="value">기본값(value)</label>
+        <input type="text" id="value" name="value" value="기본 텍스트">
+
+        <button type="submit">제출</button>
+    </form>
+
+    <h2>label과 input 연결</h2>
+    <p>label의 for 속성과 input의 id를 일치시키면 label 클릭시 input에 포커스 됩니다</p>
+    <form>
+
+        <!--방법1: for와 id로 연결. 명시적 라벨링-->
+        <label for="method1">방법 1( for -id): </label>
+        <input type="text" id="method1" name="method1">
+
+        <!--방법2: label 안에 input 연결. 암묵적 라벨링-->
+        <label> 방법2(감싸기):
+            <input type="text" name="method2">
+        </label>
+    </form>
+
+    <h2>숫자와 날짜 입력</h2>
+    <form>
+        <!--type: number (숫자), min, max,step-->
+        <label for="age">나이(number)</label>
+        <input type="number" id="age" name="age" min="0" max="120" step="1">
+
+        <!--type: range (범위 슬라이더)-->
+        <label for="volume">볼륨 (range)</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" step="10">
+
+        <!--type: date 날자 선택-->
+        <label for="birthday">생년월일 (date)</label>
+        <input type="date" id="birthday" name="birthday">
+
+        <!--type: time 시간선택-->
+        <label for="meeting"></label>
+        <input type="time" id="meeting" name="meeting">
+
+        <!--type: datetime-local 날짜 시간-->
+        <label for="appointment">예약 일시 (datetime-local)</label>
+        <input type="datetime-local" id="appointment" name="appointment">
+
+        <button type="submit">제출</button>
+
+    </form>
+
+    <h2>기타 input</h2>
+    <form>
+        <!--type: color (색상선택) -->
+        <label for="color">색상 선택 (color)</label>
+        <input type="color" id="color" name="color" value="#ff0000">
+
+        <!--type: serch 검색 -->
+        <label for="serch">검색 (serch)</label>
+        <input type="serch" id="serch" name="serch" placeholder="검색어 입력">
+
+        <!--type: hidden -->
+      
+        <input type="hidden" name="userId" value="12345">
+        <button type="submit">제출</button>
+    </form>
+
+    <h2>button type</h2>
+    <form>
+
+        <button type="submit">제출 버튼</button>
+        <button type="reset">초기화 버튼</button>
+        <button type="button" onclick="alert('클릭')">일반 버튼</button>
+
+    </form>
+
+
+
+
+
+</body>
+</html>

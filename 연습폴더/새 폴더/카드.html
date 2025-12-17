@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.card-box {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    width: 800px;
+}
+
+.pink-card {
+    order: 1;
+    width: 212px;
+}
+.green-card {
+    order: 2;
+    width: 212px;
+}
+.pink-card,
+.green-card {
+    width: 212px;
+    height: 235px;
+    border: 1px solid #E6E6E6;
+    border-radius: 14px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pink {
+    height: 128px;
+    background-color: #F1D6D6;
+}
+
+.green {
+    height: 128px;
+    background-color: #90C2A1;
+    position: relative;
+}
+
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #386E4A;
+    font-size: 11px;
+    color: white;
+    border-radius: 14px;
+    padding: 5px 8px;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+.action {
+    height: 25px;
+    background-color: #99A7FF;
+    color: white;
+    border: 1px solid #99A7FF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    margin-top: auto; 
+}
+
+
+.green-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
+}
+
+.green-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.green-text {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+}
+
+
+.green-btn {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;  
+}
+
+.green-action,
+.green-action2 {
+    flex: 1;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid #c1c1c1;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+
+.green-action {
+    background-color: white;
+}
+
+.green-action2 {
+    background-color: #49AEE0;
+    color: white;
+    border-color: #49AEE0;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul class="card-box">
+            <li class="pink-card">
+                <div class="pink"></div>
+                <div class="content">
+                    <h1 class="header">Heading</h1>
+                    <p class="text">This is a short description about the card</p>
+                    <p class="action">Action</p>
+                </div>
+            </li>
+            <li class="pink-card">
+                <div class="pink"></div>
+                <div class="content">
+                    <h1 class="header">Heading</h1>
+                    <p class="text">This is a short description about the card</p>
+                    <p class="action">Action</p>
+                </div>
+            </li>
+            <li class="pink-card">
+                <div class="pink"></div>
+                <div class="content">
+                    <h1 class="header">Heading</h1>
+                    <p class="text">This is a short description about the card</p>
+                    <p class="action">Action</p>
+                </div>
+            </li>
+
+            <li class="green-card">
+                <div class="green">
+                    <div class="badge">badge</div>
+                </div>
+                <div class="green-content">
+                    <h1 class="green-header">Heading</h1>
+                    <p class="green-text">This is a short description about the card</p>
+                    <div class="green-btn">
+                        <p class="green-action">Action</p>
+                        <p class="green-action2">Action</p>
+                    </div>
+                </div>
+            </li>
+            <li class="green-card">
+                <div class="green">
+                    <div class="badge">badge</div>
+                </div>
+                <div class="green-content">
+                    <h1 class="green-header">Heading</h1>
+                    <p class="green-text">This is a short description about the card</p>
+                    <div class="green-btn">
+                        <p class="green-action">Action</p>
+                        <p class="green-action2">Action</p>
+                    </div>
+                </div>
+            </li>
+            <li class="green-card">
+                <div class="green">
+                    <div class="badge">badge</div>
+                </div>
+                <div class="green-content">
+                    <h1 class="green-header">Heading</h1>
+                    <p class="green-text">This is a short description about the card</p>
+                    <div class="green-btn">
+                        <p class="green-action">Action</p>
+                        <p class="green-action2">Action</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
