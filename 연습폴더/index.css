@@ -305,6 +305,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+    margin-left:10px;
     gap: 10px;
     color: var(--font-color);
 }
@@ -471,7 +472,10 @@ body {
 
         margin: 20px auto;
     }
-
+    .profile-img {
+        margin: 0 auto;
+        padding-right: 5px;
+    }
 }
 
 @media screen and (min-width: 873px ) and (max-width: 1279px) {
