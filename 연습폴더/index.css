@@ -190,8 +190,8 @@ body {
    align-items: center;
    margin-top: 10px;
    width: 200px;
-   height: 260px;
-   animation: scrollUp 9s linear infinite;
+   height: 360px;
+   animation: scrollUp 10s linear infinite;
 
 }
 .banner-track {
@@ -217,7 +217,7 @@ body {
     }
     100% {
 
-        transform: translateY(-300px);
+        transform: translateY(-1100px);
     }
 }
 
