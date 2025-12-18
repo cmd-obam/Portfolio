@@ -18,7 +18,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 .container {
-    width: 100%;                         
+    width: 100%;
     max-width: 1280px;
     padding: 0 16px;
     position: relative;
@@ -43,6 +43,7 @@ body {
     z-index: 1;
     height: 1px;
 }
+
 
 
 .portfolio-text {
@@ -191,7 +192,7 @@ body {
    margin-top: 10px;
    width: 200px;
    height: 360px;
-   animation: scrollUp 10s linear infinite;
+   animation: scrollUp 18s linear infinite;
 
 }
 .banner-track {
@@ -217,10 +218,18 @@ body {
     }
     100% {
 
-        transform: translateY(-1100px);
+        transform: translateY(-1400px);
     }
 }
+.caption {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 5px;
+    background-color: antiquewhite;
+    text-align: center;
 
+
+}
 
 
 .work-sports-container {
@@ -262,7 +271,8 @@ body {
 
 .customer {
     font-size: 20px;
-    font-weight: 500;
+    line-height: 20px;
+    font-weight: 700;
     margin-left: 10px;
 }
 
@@ -285,7 +295,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     margin-left: 10px;;
-    line-height: 20px;
+    line-height: 35px;
 }
 
 .edu-skill-box {
@@ -322,6 +332,7 @@ body {
 
 .edu-text-box {
     font-size: 14px;
+    line-height: 20px;
     font-weight: 500;
 }
 
@@ -448,7 +459,9 @@ body {
 }
 
 
-
+p,h2,h3 {
+    font-weight: 500;
+}
 
 @media screen and (max-width:1280px) {
 
@@ -475,6 +488,9 @@ body {
     .profile-img {
         margin: 0 auto;
         padding-right: 5px;
+    }
+    .edu-skill-box {
+        margin-top: 10px;
     }
 }
 
