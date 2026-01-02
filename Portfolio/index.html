@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="프론트엔드 개발자 Han Chan Woo의 포트폴리오입니다. 프로젝트, 기술 스택, 경력 등을 확인할 수 있습니다.">
     <title>Han's portfolio</title>
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./assets/img/Vector.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Vector.png" sizes="32x32">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 
         <main class="main-container">
             <div class="profile-container">
-                <div class="profile">About Me
+                <div class="profile">Profile
                     
                 </div>
                 <div class="profile-text-box">
@@ -167,7 +167,7 @@
                 </div> <!--education-->
                 <div class="skill-edu-container">
                     <div class="skill">
-                        <h2 class="skill-text">SKILL(보수예정)</h2>
+                        <h2 class="skill-text">SKILL</h2>
                         <div class="skill-box">
                             <div class="skill-inner">
                                 <div class="card-face card-front">
@@ -204,36 +204,13 @@
                 </div> <!--skill-edu-container-->
             </div>
         </main> <!--main-container-->
-        <div class="fixed-button-wrapper">
-            <a href="#" class="top-btn">
-                <img src="./assets/img/top.png" alt="맨 위로 이동">
-            </a>
-            <button id="dark-mode-toggle" class="mode-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                </svg>
-            </button>
-        </div>
+        <div class="top">
+            <div class="top-box"></div>
+            <p><a href="#top">Top</a></p>
+         </div>
       <footer class="footer">
         <p>© 이스트소프트 오르미 캠프 2025.11.18~</p>
      </footer>
     </div> <!--container-->
-
-
-
-
-    <!--스크립트-->
-    <script>
-        const darkMode = document.querySelector("#dark-mode-toggle")
-        darkMode.addEventListener('click', (e) => {
-            e.preventDefault(); 
-            
-            document.body.classList.toggle('dark-mode');
-        });
-
-
-
-
-    </script>
 </body>
 </html>
